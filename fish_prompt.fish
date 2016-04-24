@@ -31,8 +31,19 @@ function fish_prompt
   set -g __fish_git_prompt_showdirtystate true
   set -g __fish_git_prompt_showuntrackedfiles true
   set -g __fish_git_prompt_showstashstate true
+  set -g __fish_git_prompt_showupstream true
   set -g __fish_git_prompt_color green
+  set -g __fish_git_prompt_color_upstream_ahead green
+  set -g __fish_git_prompt_color_upstream_behind red
   set -g __fish_git_prompt_color_flags red
+
+  # Status Chars
+  set -g __fish_git_prompt_char_dirtystate '⚡'
+  set -g __fish_git_prompt_char_stagedstate '→'
+  set -g __fish_git_prompt_char_untrackedfiles '☡'
+  set -g __fish_git_prompt_char_stashstate '↩'
+  set -g __fish_git_prompt_char_upstream_ahead '+'
+  set -g __fish_git_prompt_char_upstream_behind '-'
 
   # Color prompt char red for non-zero exit status
   set -l pcolor $gray
