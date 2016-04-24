@@ -14,7 +14,7 @@ function fish_prompt
       case 0
 	set -g __fish_prompt_char '#'
       case '*'
-	set -g __fish_prompt_char '>'
+	set -g __fish_prompt_char '$'
     end
   end
 
@@ -49,5 +49,5 @@ function fish_prompt
   echo
 
   # Line 2
-  echo -n $red'└'$pcolor$__fish_prompt_char $normal
+  echo -n $red'└'$pcolor $__fish_prompt_char $normal
 end
