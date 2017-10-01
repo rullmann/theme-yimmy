@@ -63,6 +63,9 @@ function fish_prompt
   if begin; git log -n 1 ^/dev/null | grep -qc "\-\-wip\-\-"; end
     echo -n $brwhite' WIP!'$normal
   end
+  if set -q VIRTUAL_ENV
+    echo -n -s ' ' $cyan '(' (basename "$VIRTUAL_ENV") ')' $normal
+  end
   echo
 
   # Line 2
